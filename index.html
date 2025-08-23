@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Futuristic Lavender iPod Player</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="ipod" id="ipod">
+        <header class="top">
+          <h1 class="title">💜 Futuristic iPod</h1>
+        </header>
+        <div class="screen" aria-live="polite">
+          <div class="song-meta">
+            <div class="song-title" id="songTitle">Song 1</div>
+          </div>
+          <div class="eq" id="eq" aria-hidden="true">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+          </div>
+        </div>
+        <div class="progress-wrap">
+          <input type="range" id="progress" class="progress" min="0" max="100" step="0.1" value="0" aria-label="Seek through song" />
+          <div class="time">
+            <span id="currentTime">0:00</span>
+            <span id="duration">0:00</span>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="prev" class="btn" aria-label="Previous">⏮</button>
+          <button id="play" class="btn" aria-label="Play/Pause">▶</button>
+          <button id="next" class="btn" aria-label="Next">⏭</button>
+        </div>
+        <div class="row-2">
+          <button id="shuffle" class="btn" aria-pressed="false" aria-label="Shuffle">🔀</button>
+          <button id="notes" class="btn" aria-label="Open Special Notes">💌 Notes</button>
+          <button id="glow" class="btn" aria-label="Glow Up Theme">✨ Glow Up</button>
+        </div>
+      </section>
+    </main>
+    <div class="overlay hidden" id="notesOverlay" role="dialog" aria-modal="true" aria-labelledby="notesTitle">
+      <div class="dialog">
+        <h2 id="notesTitle">Your Special Note</h2>
+        <p id="noteText">Hey Love, this is your special note 💜✨</p>
+        <textarea id="noteEdit" class="hidden" maxlength="500" aria-label="Edit your note"></textarea>
+        <div class="dialog-actions">
+          <button id="editNote" class="btn btn-sm" aria-label="Edit note">Edit</button>
+          <button id="saveNote" class="btn btn-sm hidden" aria-label="Save note">Save</button>
+          <button id="closeNotes" class="btn btn-sm" aria-label="Close notes">Close</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
